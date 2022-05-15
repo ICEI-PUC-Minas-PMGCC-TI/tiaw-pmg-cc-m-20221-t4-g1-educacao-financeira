@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="styles/padrao.css">
+    <link rel="stylesheet" href="styles/principal.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/3barras.css">
+    
+</head>
+<body>
+    <section id="display">
+        <main>
+          <form class="formulario_cadastro" method="post">
+            <input type="text" id="nome" value="">
+            <input type="text" id="user" value="">
+            <input type="text" id="email" value="">
+            <input type="password" id="pass" value="">
+            <button type="button" name="button" onclick="cadastrar()">Cadastrar</button>
+          </form>
+          <button type="button" onclick="window.location.href = './login.html';">Cancelar</button>
+        </main>
+    </section>
+</body>
+<script type="text/javascript" src="cadastro.js"></script>
+</html>

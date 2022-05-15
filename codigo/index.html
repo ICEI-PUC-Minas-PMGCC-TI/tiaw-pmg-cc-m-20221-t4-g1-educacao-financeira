@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Padrão</title>
+    <link rel="stylesheet" href="styles/padrao.css">
+    <link rel="stylesheet" href="styles/principal.css">
+    <link rel="stylesheet" href="styles/menu.css">
+    <link rel="stylesheet" href="styles/3barras.css">
+</head>
+<body>
+    <header>
+        <div id="cabecao">
+            <img id="ftperfil" src="Celta2portasPreto.png" alt="foto de perfil aqui">
+            <nav>
+                <div class="salvation"><input type="checkbox" id="checkbox" onclick="msn()" >
+                    <label for="checkbox">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section id="display">
+        <main>
+            <a href="">
+                <div class="retangulo">
+                    <h1>Clicável 1</h1>
+                </div>
+            </a>
+            <a href="">
+                <div class="retangulo">
+                    <h1>Clicável 2</h1>
+                </div>
+            </a>
+            <a href="">
+                <div class="retangulo">
+                    <h1>Clicável 3</h1>
+                </div>
+            </a>
+        </main>
+        <div id="main">
+            <div class="opcoesmenu">
+                <a href=""><p>Opção 1</p></a>
+            </div>
+            <div class="opcoesmenu">
+                <a href=""><p>Opção 2</p></a>
+            </div>
+            <div class="opcoesmenu">
+                <a href="" onclick="logout()"><p>LogOut</p></a>
+            </div>
+        </div>
+    </section>
+</body>
+<script>
+
+    if(!sessionStorage.getItem('logado')){
+        window.location.href = "./login.html";
+    }
+
+    const main = document.getElementById('main')
+    var test = document.querySelector('main')
+    //var noname = document.getElementById('checkbox')
+    //main.addEventListener('click',clicar)
+     function msn() {
+         main.classList.toggle('active')
+         test.classList.toggle('active')
+     }
+     //<input id="inputed" type="button"
+
+     function logout(){
+         sessionStorage.clear();
+     }
+
+  </script>
+</html>

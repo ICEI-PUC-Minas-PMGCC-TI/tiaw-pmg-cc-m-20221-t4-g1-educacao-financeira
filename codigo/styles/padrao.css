@@ -1,0 +1,14 @@
+:root{
+    /*cores aqui*/
+    --CorPrincipal:black;
+    --CorSecundaria:#00008B;
+    --CorFonte:white;
+    /*textual aqui*/
+    --Titulos:20px;
+    --Subtitulos:15px;
+    --Textos:13px;
+    --GrossuraDaFonte:bold;
+}
+a{
+    text-decoration: none;
+}
