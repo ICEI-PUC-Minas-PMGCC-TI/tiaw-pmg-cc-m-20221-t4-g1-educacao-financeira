@@ -4,6 +4,14 @@ let logado = sessionStorage.getItem('logado');
 
 let dados;
 
+let user = JSON.parse(localStorage.getItem('banco'))
+for(let i = 0; i < user.users.length;i++){
+    if (user.users[i].id == logado){
+        document.getElementById('nor').innerHTML = "Bem Vindo, "+user.users[i].nome+"!";
+    }
+}
+
+
 if (!infos[logado]){
 
     infos[logado] = {metas:[]};

@@ -48,6 +48,31 @@ main{
     background-color: var(--CorPrincipal);
     text-align: center;
 }
+.buts{
+    cursor: pointer;
+    height: 15%;
+    width: 15%;
+    margin-left: 80%;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: rgb(3, 211, 252);
+    text-align: center;
+    font-size: 25px;
+}
+
+.btns{
+    
+    cursor: pointer;
+    height: 100%;
+    width: 100%;
+    margin-left: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
+    background-color: rgb(3, 211, 252);
+    text-align: center;
+    font-size: 25px;
+}
+
 .retangulo h1{
     font-size: var(--Titulos);
     color: var(--CorFonte);

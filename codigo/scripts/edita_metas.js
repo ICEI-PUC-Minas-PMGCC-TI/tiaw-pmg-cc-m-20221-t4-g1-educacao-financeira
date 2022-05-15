@@ -4,6 +4,13 @@ let infos = JSON.parse(localStorage.getItem('infos'));
 let logado = sessionStorage.getItem('logado');
 let dados = infos[logado].metas[id];
 
+let user = JSON.parse(localStorage.getItem('banco'))
+for(let i = 0; i < user.users.length;i++){
+    if (user.users[i].id == logado){
+        document.getElementById('nor').innerHTML = "Bem Vindo, "+user.users[i].nome+"!";
+    }
+}
+
 document.getElementById('nome').value = dados.nome;
 document.getElementById('valor').value = dados.valor;
 

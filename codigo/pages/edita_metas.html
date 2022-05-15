@@ -27,15 +27,18 @@
     </header>
     <section id="display">
         <main>
-            <h1>Editar Meta</h1>
-            <input type="text" id="nome">
-            <input type="text" id="valor">
-            <button onclick="window.location.href = './lista_metas.html';">Cancelar</button>
-            <button onclick="salvar()">Salvar</button>
+            <h1  style="font-size: 22px;margin-left:0.5%;" id="nor"></h1>
+            <h1 style="font-size: 50px;margin-left:2%;">Editar Meta</h1>
+            <input style="font-size: 35px ;margin-left: 15px;width: 40%;height: 35px;" type="text" id="nome" placeholder="Descrição da Meta">
+            <input style="font-size: 35px ;margin-left: 15px;width: 40%;height: 35px;" type="number" id="valor" placeholder="Valor da Meta">
+            <div>
+            <div style="display:inline-block;"><button class="btns" onclick="window.location.href = './lista_metas.html';">Cancelar</button></div>
+            <div style="display:inline-block;"><button class="btns" onclick="salvar()">Salvar</button></div>
+            </div>
         </main>
         <div id="main">
             <div class="opcoesmenu">
-                <a href=""><p>Opção 1</p></a>
+                <a href="../index.html"><p>Home</p></a>
             </div>
             <div class="opcoesmenu">
                 <a href=""><p>Opção 2</p></a>
