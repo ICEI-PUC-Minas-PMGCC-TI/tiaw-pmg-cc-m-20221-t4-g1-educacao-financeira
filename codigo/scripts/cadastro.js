@@ -1,5 +1,5 @@
 if (!localStorage.getItem('banco')){
-    window.location.href = "./login.html";
+    window.location.href = "../pages/login.html";
 }
 
 function cadastrar(){

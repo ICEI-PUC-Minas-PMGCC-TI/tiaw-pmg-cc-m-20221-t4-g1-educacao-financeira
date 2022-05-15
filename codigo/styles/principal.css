@@ -1,7 +1,7 @@
 body{
     opacity: 0;
 }
-@media(max-width: 920px){
+@media(max-width: 999999px){
 body{
     opacity: 1;
     margin: 0;

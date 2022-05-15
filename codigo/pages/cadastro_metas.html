@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template Padrão</title>
-    <link rel="stylesheet" href="styles/padrao.css">
-    <link rel="stylesheet" href="styles/principal.css">
-    <link rel="stylesheet" href="styles/menu.css">
-    <link rel="stylesheet" href="styles/3barras.css">
+    <title>Metas</title>
+    <link rel="stylesheet" href="../styles/padrao.css">
+    <link rel="stylesheet" href="../styles/principal.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/3barras.css">
 </head>
 <body>
     <header>
         <div id="cabecao">
-            <img id="ftperfil" src="Celta2portasPreto.png" alt="foto de perfil aqui">
+            <img id="ftperfil" src="../Celta2portasPreto.png" alt="foto de perfil aqui">
             <nav>
                 <div class="salvation"><input type="checkbox" id="checkbox" onclick="msn()" >
                     <label for="checkbox">
@@ -27,21 +27,11 @@
     </header>
     <section id="display">
         <main>
-            <a href="./pages/lista_metas.html">
-                <div class="retangulo">
-                    <h1>Metas</h1>
-                </div>
-            </a>
-            <a href="">
-                <div class="retangulo">
-                    <h1>Clicável 2</h1>
-                </div>
-            </a>
-            <a href="">
-                <div class="retangulo">
-                    <h1>Clicável 3</h1>
-                </div>
-            </a>
+            <h1>Cadastrar Meta</h1>
+            <input type="text" id="nome">
+            <input type="text" id="valor">
+            <button onclick="window.location.href = './lista_metas.html';">Cancelar</button>
+            <button onclick="salvar()">Salvar</button>
         </main>
         <div id="main">
             <div class="opcoesmenu">
@@ -59,21 +49,7 @@
 <script>
 
     if(!sessionStorage.getItem('logado')){
-        window.location.href = "./pages/login.html";
-    }
-    if(!localStorage.getItem('infos')){
-        let infos = {
-            '123321':{
-                metas:[
-                        {nome:'Toyota Corolla 1.6 Xl 1986',
-                        valor: 69990},
-                        {nome:'Televisão National 14 polegasdas',
-                        valor: 2698.99}
-                    ]
-                }
-        };
-
-        localStorage.setItem('infos',JSON.stringify(infos));
+        window.location.href = "./login.html";
     }
 
     const main = document.getElementById('main')
@@ -91,4 +67,5 @@
      }
 
   </script>
+  <script type="text/javascript" src="../scripts/cadastro_metas.js"></script>
 </html>
