@@ -1,0 +1,48 @@
+.salvation {
+    width: 20%;
+    height: 100%;
+    display: flex;
+}
+#checkbox {
+    display: none;
+ }
+ label {
+    width: 80px;
+    height: 40px;
+    background:transparent;
+    border:none;
+    position: relative;
+    top: 2px;
+    left: 35px;
+}
+.salvation label span {
+    background: var(--CorFonte);
+    width: 27px;
+    border-radius: 10px;
+    height: 3px;
+    position: absolute;
+    transition: 0.25s ease-in-out;
+}
+.salvation label span:nth-child(1) {
+  top:0;
+}
+.salvation label span:nth-child(2) {
+top:8px;
+}
+.salvation label span:nth-child(3) {
+ top:16px;
+}
+#checkbox:checked + label span:nth-child(1) {
+    transform: rotate(-45deg);
+    top:8px;
+  }
+  #checkbox:checked + label span:nth-child(2) {
+     opacity: 0;
+  }
+  #checkbox:checked + label span:nth-child(3) {
+      transform: rotate(45deg);
+      top: 8px;
+  }
+#checkbox:checked ~ #main {
+    display: flex;
+}
