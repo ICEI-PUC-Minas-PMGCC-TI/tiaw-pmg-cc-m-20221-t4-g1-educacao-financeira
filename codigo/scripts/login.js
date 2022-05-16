@@ -20,7 +20,6 @@ function logar(){
 
     for (let i = 0; i < db.users.length; i++){
         if(db.users[i].user == u && db.users[i].password == p){
-            window.alert("Bem vindo "+db.users[i].nome);
             sessionStorage.setItem('logado',db.users[i].id);
             window.location.href = "../index.html";
             return 0;
