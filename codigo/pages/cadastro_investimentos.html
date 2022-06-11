@@ -4,14 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Metas</title>
-    
+    <title>Investimentos</title>
     <link rel="stylesheet" href="../styles/padrao.css">
     <link rel="stylesheet" href="../styles/principal.css">
     <link rel="stylesheet" href="../styles/menu.css">
     <link rel="stylesheet" href="../styles/3barras.css">
-
-    
 </head>
 <body>
     <header>
@@ -30,11 +27,35 @@
     </header>
     <section id="display">
         <main>
-            <h1 style="font-size: 22px;margin-left:0.5%;" id="nor"></h1>
-            <h1 style="font-size: 50px;margin-left:2%;">Metas</h1>
-            <div id='lista'>
+            <h1  style="font-size: 22px;margin-left:0.5%;" id="nor"></h1>
+            <h1 style="font-size: 50px;margin-left:2%;">Cadastrar Investimento</h1>
+            <select style="font-size: 35px ;margin-left: 15px;width: 40%;height: 40px;" name="investimentos" id="inv">
+                <option>Selecione um Investimento</option>
+                <option value="1">CDB</option>
+                <option value="2">RDB</option>
+                <option value="3">CRA</option>
+                <option value="4">CRI</option>
+                <option value="5">Debêntures</option>
+                <option value="6">Debêntures incentivadas</option>
+                <option value="7">LC</option>
+                <option value="8">LCA</option>
+                <option value="9">LCI</option>
+                <option value="10">Letra Financeira</option>
+                <option value="11">Letra de Câmbio</option>
+                <option value="12">Títulos do Tesouro Direto</option>
+                <option value="13">Ações</option>
+                <option value="14">Fundos imobiliários </option>
+                <option value="15">Derivativos</option>
+                <option value="16">Câmbio e moedas</option>
+                <option value="17">ETFs</option>
+                <option value="18">BDRs</option>
+                <option value="19">Ouro</option>
+            </select>
+            <input style="font-size: 35px ;margin-left: 15px;width: 40%;height: 35px;" type="number" id="valor" placeholder="Valor do Investimento">
+            <div>
+            <div style="display:inline-block;"><button class="btns" onclick="window.location.href = './lista_metas.html';">Cancelar</button></div>
+            <div style="display:inline-block;"><button class="btns" onclick="salvar()">Salvar</button></div>
             </div>
-            <button class = "buts" style="margin-left: 45%;width:50%;" onclick="window.location.href = './cadastro_metas.html';">Cadastrar Nova Meta</button>
         </main>
         <div id="main">
             <div class="opcoesmenu">
@@ -70,5 +91,5 @@
      }
 
   </script>
-  <script type="text/javascript" src="../scripts/lista_metas.js"></script>
+  <script type="text/javascript" src="../scripts/cadastro_investimentos.js"></script>
 </html>

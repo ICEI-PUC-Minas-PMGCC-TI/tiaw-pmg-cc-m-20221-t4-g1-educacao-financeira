@@ -22,6 +22,6 @@ function cadastrar(){
     db.users.push(aux);
     localStorage.setItem('banco',JSON.stringify(db));
     window.alert("Usuário Cadastrado com Sucesso !!!");
-    window.location.href = "./login.html"
+    window.location.href = "../pages/login.html"
 
 }

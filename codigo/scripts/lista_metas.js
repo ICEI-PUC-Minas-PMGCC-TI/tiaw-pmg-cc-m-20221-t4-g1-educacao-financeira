@@ -14,7 +14,7 @@ for(let i = 0; i < user.users.length;i++){
 
 if (!infos[logado]){
 
-    infos[logado] = {metas:[]};
+    infos[logado] = {metas:[],investimentos:[]};
     localStorage.setItem('infos',JSON.stringify(infos));
     dados = [];
  } else {
@@ -27,6 +27,6 @@ if (dados.length > 0){
     }
     
 } else {
-    document.getElementById('lista').innerHTML = "<p>Nenhuma Meta Cadastrada :(</p>";
+    document.getElementById('lista').innerHTML = "<h1 style='margin-left:0.5%;'>Nenhuma Meta Cadastrada :(</h1>";
 }
 

@@ -16,6 +16,8 @@ function salvar(){
 
     if(document.getElementById('nome').value && document.getElementById('valor').value){
 
+        
+
         let aux = {nome: document.getElementById('nome').value,
                 valor: document.getElementById('valor').value}
 
