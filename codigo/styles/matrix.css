@@ -1,8 +1,9 @@
 :root{
-    --CorCorpo: #e6fdff;
-    --CorPrincipal: #ffc20a;
-    --CorSecundaria: #0c7bdc;
-    --CorFonte: #141414;
+    --CorCorpo: #171717;
+    --CorPrincipal: #000000;
+    --CorSecundaria: #134102;
+    --CorFonte: #3bb00f;
+    --CorNoticia: #134102;
     --Titulos: 20px;
     --Subtitulos: 15px;
     --Textos: 13px;
