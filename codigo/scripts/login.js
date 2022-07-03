@@ -1,7 +1,7 @@
 
 const inicial = {users:[{id:'123321',user:"admin",password:"admin",nome:"Simon Korkovich",email:"skorkovich@katta.com"}]};
 if (sessionStorage.getItem('logado')){
-    window.location.href = "../index.html";
+    window.location.href = "../menu.html";
 }
 let db = localStorage.getItem('banco');
 
@@ -21,7 +21,7 @@ function logar(){
     for (let i = 0; i < db.users.length; i++){
         if(db.users[i].user == u && db.users[i].password == p){
             sessionStorage.setItem('logado',db.users[i].id);
-            window.location.href = "../index.html";
+            window.location.href = "../menu.html";
             return 0;
         }
     }
