@@ -1,0 +1,15 @@
+:root{
+    --CorCorpo: #e6fdff;
+    --CorPrincipal: #ffc20a;
+    --CorSecundaria: #0c7bdc;
+    --CorFonte: #141414;
+    --CorNoticia: #0c7bdc;
+    --Titulos: 20px;
+    --Subtitulos: 15px;
+    --Textos: 13px;
+    --GrossuraDaFonte: bold;
+}
+
+a {
+    text-decoration: none;
+}
