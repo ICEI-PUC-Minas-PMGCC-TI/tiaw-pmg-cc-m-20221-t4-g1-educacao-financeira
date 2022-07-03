@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Personalização</title>
+    <title>Aulas</title>
     <link rel="stylesheet" id="switcher-id" href="">
     <link rel="stylesheet" href="styles/principal.css">
     <link rel="stylesheet" href="styles/menu.css">
@@ -28,22 +28,36 @@
         </div>
     </header>
     <section id="display">
-        <main>
-            <a href="temas.html">
-                <div class="retangulo">
-                    <h1>Temas</h1>
+        <main style="width:25% !important;">
+            <a>
+                <div class="butaula" data-aula="aula1">
+                    <h1>Aula 1</h1>
                 </div>
             </a>
-            <a href="">
-                <div class="retangulo">
-                    <h1>Botões da tela principal</h1>
+            <a>
+                <div class="butaula" data-aula="aula2">
+                    <h1>Aula 2</h1>
                 </div>
             </a>
-            <a href="aces.html">
-                <div class="retangulo">
-                    <h1>Acessibilidade</h1>
+            <a>
+                <div class="butaula" data-aula="aula3">
+                    <h1>Aula 3</h1>
                 </div>
             </a>
+            <a>
+                <div class="butaula" data-aula="aula4">
+                    <h1>Aula 4</h1>
+                </div>
+            </a>
+        </main>
+        <main style="width:75% !important; align-self: flex-end !important; align-items: center;">
+            <div
+                style="display:flex !important;align-content: center !important;justify-content: center;align-items: center;flex-wrap: nowrap;">
+                <h1 class="titulovideo" id="title" style="color: var(--CorFonte); align-self: center;"></h1>
+            </div>
+            <div style=" margin-left: 8%; margin-right: 8%; width: 84%; height: 75%;">
+                <iframe id="video" width="100%" height="100%" src="" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div:>
         </main>
         <div id="main">
             <div class="opcoesmenu">
@@ -57,22 +71,43 @@
                 </a>
             </div>
             <div class="opcoesmenu">
-                <a href="">
-                    <p>Sobre</p>
+                <a href="calculadora.html">
+                    <p>Calculadora</p>
                 </a>
             </div>
         </div>
-
     </section>
 </body>
 <script>
     let usedTheme = document.getElementsByClassName('switch');
+    let usedAula = document.getElementsByClassName('butaula');
     let style = localStorage.getItem('style');
+    let ultaula = localStorage.getItem('ultaula')
 
     if (style == null) {
         setTheme('light');
     } else {
         setTheme(style);
+    }
+
+    if (usedAula == null) {
+        setAula('aula1');
+    } else {
+        setAula(ultaula);
+    }
+
+    for (let i of usedAula) {
+
+        i.addEventListener('click', function () {
+
+            let aula = this.dataset.aula;
+
+            console.log(aula);
+
+            setAula(aula);
+
+        });
+
     }
 
     for (let i of usedTheme) {
@@ -89,6 +124,23 @@
 
     }
 
+    function setAula(aula) {
+        if (aula == 'aula1') {
+            document.getElementById('title').textContent = 'Aula 1';
+            document.getElementById('video').src = 'https://www.youtube.com/embed/dunfejH4Q9o';
+        } else if (aula == 'aula2') {
+            document.getElementById('title').textContent = 'Aula 2';
+            document.getElementById('video').src = 'https://www.youtube.com/embed/AsU7zPTvwlo';
+        } else if (aula == 'aula3') {
+            document.getElementById('title').textContent = 'Aula 3';
+            document.getElementById('video').src = 'https://www.youtube.com/embed/qAlfutQakXE';
+        } else if (aula == 'aula4') {
+            document.getElementById('title').textContent = 'Aula 4';
+            document.getElementById('video').src = 'https://www.youtube.com/embed/t_UJ4zUErkM';
+        }
+        localStorage.setItem('ultaula', aula);
+    }
+
     function setTheme(theme) {
         if (theme == 'light') {
             document.getElementById('switcher-id').href = './styles/light.css';
@@ -101,7 +153,7 @@
         } else if (theme == 'cont') {
             document.getElementById('switcher-id').href = './styles/contraste.css'
         } else if (theme == 'dalt') {
-                document.getElementById('switcher-id').href = './styles/daltonismo.css'
+            document.getElementById('switcher-id').href = './styles/daltonismo.css'
         }
         localStorage.setItem('style', theme);
     }
